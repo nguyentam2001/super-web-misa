@@ -1,0 +1,93 @@
+.t-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: calc(100vh - var(--header-heigh));
+  background-color: var(--color-content);
+}
+
+.t-header-content {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  padding: 20px 20px 20px 20px;
+  right: 0px;
+  background: var(--color-content);
+  /* update */
+  display: flex;
+  justify-content: space-between;
+}
+.t-header-content-left {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+/* content-body */
+.t-content-body {
+  overflow: auto;
+  padding: 64px 0 0 0;
+  overflow-y: scroll;
+  max-height: calc(100vh - 48px);
+  margin-top: 16px;
+  /* margin-bottom: var(--footer-heigh); */
+  background-color: var(--color-content);
+}
+.t-content-body-left {
+  background-color: #ffffff;
+  position: sticky;
+  left: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.t-content-body-reload {
+  margin-left: 16px;
+  /* margin-right: 16px; */
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  background: url(../../content/img/Sprites.64af8f61.svg) no-repeat;
+  cursor: pointer;
+  background-position: -423px -201px;
+}
+.t-content-body-reload:hover {
+  background-position: -1097px -88px;
+}
+
+.t-content-body-table {
+}
+
+/* thêm cho cuộn cột */
+.t-content-body-table .t-grid {
+  position: relative;
+}
+.t-content-body-table .t-row {
+  position: relative;
+  overflow-y: visible;
+}
+/* --- */
+.t-content-body .t-table-paging-wrapper {
+  position: sticky;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  background-color: var(--color-content);
+  bottom: 0;
+}
+.t-table-paging-wrapper {
+  background-color: var(--color-content);
+}
+.t-table-paging {
+  background-color: #ffffff;
+}
+.t-td-table-center {
+}

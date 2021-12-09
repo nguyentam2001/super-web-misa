@@ -1,0 +1,79 @@
+.t-header {
+  height: var(--header-heigh);
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.t-header-left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.t-header-left-menu {
+  margin: 0 10px;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  cursor: pointer;
+  background: url(../../content/img/Sprites.64af8f61.svg) no-repeat;
+  background-position: -843px -30px;
+}
+.t-header-left-title {
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.t-header-left-down {
+  transform: rotate(90deg);
+  margin-left: 10px;
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  min-height: 14px;
+  cursor: pointer;
+  background: url(../../content/img/Sprites.64af8f61.svg) no-repeat;
+  background-position: -80px -360px;
+}
+.t-header-right {
+  height: 100%;
+  display: flex;
+  margin-right: 12px;
+  align-items: center;
+}
+
+.t-header-right-bell {
+  cursor: pointer;
+  margin-right: 24px;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  background: url(../../content/img/Sprites.64af8f61.svg) no-repeat;
+  background-position: -788px -30px;
+}
+.t-header-right-author {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.t-header-right-icon {
+  font-size: 28px;
+  margin-right: 8px;
+  color: #405d5d;
+}
+.t-header-right-down {
+  cursor: pointer;
+  margin-left: 8px;
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  min-height: 14px;
+  background: url(../../content/img/Sprites.64af8f61.svg) no-repeat;
+  background-position: -1076px -32px;
+  cursor: pointer;
+}

@@ -1,0 +1,97 @@
+:root {
+  --primary-color: #2ca01c;
+  --white-color: #ffffff;
+  --hover-color: #f8f8f8;
+  --active-color: #3dd429;
+  --nav-color: #393a3d;
+  --navbar-with: 180px;
+  --footer-heigh: 56px;
+  --header-heigh: 48px;
+  --color-content: #f4f5f8;
+  --btn-hover: #e0e0e0;
+}
+
+.p-flex-end {
+  justify-content: flex-end !important;
+}
+.m-margin-left-8 {
+  margin-left: 8px;
+}
+
+.m-margin-top-8 {
+  margin-top: 8px;
+}
+.m-margin-top-16 {
+  margin-top: 16px;
+}
+
+.m-margin-right-8 {
+  margin-right: 8px;
+}
+.m-padding-left-8 {
+  padding-left: 8px;
+}
+
+.m-padding-right-8 {
+  padding-right: 8px;
+}
+.m-with-auto {
+  width: auto !important;
+}
+.c-flex-end {
+  align-items: flex-end;
+}
+.font-bold {
+  font-weight: bold;
+}
+
+.text-algin-center {
+  text-align: center;
+}
+.text-algin-left {
+  text-align: left;
+}
+
+.text-algin-right {
+  text-align: right;
+}
+.m-row {
+  display: flex;
+  width: 100%;
+}
+.m-col-1 {
+  width: 8.3333333%;
+}
+.m-col-2 {
+  width: 16.666667%;
+}
+.m-col-3 {
+  width: 25%;
+}
+.m-col-4 {
+  width: 33.3333333%;
+}
+.m-col-5 {
+  width: 41.6666667%;
+}
+.m-col-6 {
+  width: 50%;
+}
+.m-col-7 {
+  width: 58.3333331%;
+}
+.m-col-8 {
+  width: 66.666666%;
+}
+.m-col-9 {
+  width: 74.9999999%;
+}
+.m-col-10 {
+  width: 83.33333%;
+}
+.m-col-11 {
+  width: 91.66666666%;
+}
+.m-col-12 {
+  width: 100%;
+}

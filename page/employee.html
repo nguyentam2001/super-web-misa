@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="https://actappg2.misacdn.net/favicon.ico" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <title>S1-23 Nguyễn Văn Tâm</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="t-navbar">
+        <div class="t-navbar-logo">
+          <div class="t-navbar-logo-left"></div>
+          <div class="t-navbar-logo-right">
+            <div class="t-navbar-logo-ms"></div>
+            <div class="t-navbar-logo-name"></div>
+          </div>
+        </div>
+        <div class="t-navbar-list">
+          <div class="t-navbar-item">
+            <div class="t-navbar-item-icon t-icon-overview"></div>
+            <div class="t-navbar-item-text">Tổng quan</div>
+          </div>
+          <div class="t-navbar-item">
+            <div class="t-navbar-item-icon t-icon-cash"></div>
+            <div class="t-navbar-item-text">Tiền mặt</div>
+          </div>
+          <div class="t-navbar-item">
+            <div class="t-navbar-item-icon t-icon-deposits"></div>
+            <div class="t-navbar-item-text">Tiền gửi</div>
+          </div>
+          <div class="t-navbar-item">
+            <div class="t-navbar-item-icon t-icon-purchase"></div>
+            <div class="t-navbar-item-text">Mua hàng</div>
+          </div>
+          <div class="t-navbar-item">
+            <div class="t-navbar-item-icon t-icon-sell"></div>
+            <div class="t-navbar-item-text">Bán hàng</div>
+          </div>
+          <div class="t-navbar-item">
+            <div class="t-navbar-item-icon t-icon-management"></div>
+            <div class="t-navbar-item-text">Quản lý hóa đơn</div>
+          </div>
+
+          <div class="t-navbar-item">
+            <div class="t-navbar-item-icon t-icon-warehouse"></div>
+            <div class="t-navbar-item-text">Kho</div>
+          </div>
+          <div class="t-navbar-item">
+            <div class="t-navbar-item-icon t-icon-tool"></div>
+            <div class="t-navbar-item-text">Công cụ dụng cụ</div>
+          </div>
+          <div class="t-navbar-item">
+            <div class="t-navbar-item-icon t-icon-assets"></div>
+            <div class="t-navbar-item-text">Tài sản cố định</div>
+          </div>
+          <div class="t-navbar-item">
+            <div class="t-navbar-item-icon t-icon-tax"></div>
+            <div class="t-navbar-item-text">Thuế</div>
+          </div>
+          <div class="t-navbar-item">
+            <div class="t-navbar-item-icon t-icon-price"></div>
+            <div class="t-navbar-item-text">Giá thành</div>
+          </div>
+          <div class="t-navbar-item">
+            <div class="t-navbar-item-icon t-icon-synthetic"></div>
+            <div class="t-navbar-item-text">Tổng hợp</div>
+          </div>
+          <div class="t-navbar-item">
+            <div class="t-navbar-item-icon t-icon-budget"></div>
+            <div class="t-navbar-item-text">Ngân sách</div>
+          </div>
+          <div class="t-navbar-item">
+            <div class="t-navbar-item-icon t-icon-report"></div>
+            <div class="t-navbar-item-text">Báo cáo</div>
+          </div>
+          <div class="t-navbar-item">
+            <div class="t-navbar-item-icon t-icon-overview"></div>
+            <div class="t-navbar-item-text">Phân tích tài chính</div>
+          </div>
+        </div>
+      </div>
+      <div class="t-wrapper-page">
+        <div class="t-header">
+          <div class="t-header-left">
+            <div class="t-header-left-menu"></div>
+            <div class="t-header-left-title">
+              CÔNG TY TNHH SẢN XUẤT - THƯƠNG MẠI - DỊCH VỤ QUI PHÚC
+            </div>
+            <div class="t-header-left-down"></div>
+          </div>
+          <div class="t-header-right">
+            <div class="t-header-right-bell"></div>
+            <div class="t-header-right-author">
+              <div class="t-header-right-icon">
+                <i class="far fa-user-circle"></i>
+              </div>
+              Nguyễn Văn Tâm
+            </div>
+            <div class="t-header-right-down"></div>
+          </div>
+        </div>
+        <div class="t-content">
+          <div class="t-header-content">
+            <div class="t-header-content-left">Nhân viên</div>
+            <div class="t-header-content-right">
+              <div class="t-row">
+                <button id="btnAddEmployee" class="t-btn t-btn-add">
+                  Thêm mới nhân viên
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="t-content-body">
+            <div class="t-content-body-left">
+              <div class="input-search-wrapper">
+                <input
+                  id="searchEmployee"
+                  type="text"
+                  class="t-input t-input-search"
+                  placeholder="Tìm theo mã, tên nhân viên"
+                />
+                <i id="searchEmployeeBtn" class="fas fa-search"></i>
+              </div>
+              <div id="reLoadBtn" class="t-content-body-reload"></div>
+            </div>
+
+            <!-- custom-table -->
+            <ttable
+              api="http://amis.manhnv.net/api/v1/Employees"
+              id="tableEmployees"
+            >
+              <tcol class="t-table-background-col"></tcol>
+              <tcol fieldStatus="checkBox"></tcol>
+              <tcol fieldValue="EmployeeCode"> Mã nhân viên </tcol>
+              <tcol fieldValue="EmployeeName"> Tên nhân viên </tcol>
+              <tcol fieldValue="GenderName"> Giới tính </tcol>
+              <tcol fieldValue="DateOfBirth" formatType="date">
+                Ngày sinh
+              </tcol>
+              <tcol fieldValue="PersonalTaxCode" formatType="number">
+                Số CMND
+              </tcol>
+              <tcol fieldValue="DepartmentName"> Chức danh </tcol>
+              <tcol fieldValue="EmployeePosition">Tên đơn vị </tcol>
+              <tcol fieldValue="BankAccountNumber" formatType="number"
+                >Số tài khoản
+              </tcol>
+              <tcol fieldValue="BankName"> Ngân hàng </tcol>
+              <tcol fieldValue="BankBranchName"> Chi nhánh ngân hàng </tcol>
+              <tcol fieldFunc="function">Chức năng</tcol>
+              <tcol class="t-table-background-col"></tcol>
+            </ttable>
+
+            <!-- table-after -->
+            <!-- footer-page -->
+            <div class="t-table-paging-wrapper">
+              <div class="t-table-paging">
+                <div class="t-table-paging-left">
+                  <div>
+                    Tổng số:
+                    <span class="t-table-paging-sum font-bold">1035</span>
+                    bản ghi
+                  </div>
+                </div>
+                <div class="t-table-paging-right">
+                  <div class="t-combobox">
+                    <combobox id="cbxPageSize">
+                      <item value="5">05 bản ghi trên 1 trang</item>
+                      <item value="10">10 bản ghi trên 1 trang</item>
+                      <item value="15">15 bản ghi trên 1 trang</item>
+                      <item value="20">20 bản ghi trên 1 trang</item>
+                      <item ItemDefault="true" value="25"
+                        >25 bản ghi trên 1 trang</item
+                      >
+                    </combobox>
+                  </div>
+                  <div class="t-table-paging-numbers">
+                    <div class="t-table-paging-before">Trước</div>
+                    <div class="t-table-paging-numbers-wrapper">
+                      <div class="t-table-paging-number">1</div>
+                      <div class="t-table-paging-number">2</div>
+                      <div class="t-table-paging-number">3</div>
+                      <div class="t-table-paging-number">52</div>
+                    </div>
+                    <div class="t-table-paging-after">Sau</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- footer-page-end -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -- list menu xóa-- -->
+    <div id="listOption" class="t-row-list">
+      <div class="t-row-item">Nhân bản</div>
+      <div id="showPopUpDel" class="t-row-item">Xóa</div>
+      <div class="t-row-item">Ngừng sử dụng</div>
+    </div>
+    <!-- -- end menu xóa-- -->
+    <!-- dialog add employee -->
+    <div id="showDialog" class="show-dialog">
+      <div class="m-dialog">
+        <div class="m-dialog-wrapper">
+          <div class="form-employee m-with-auto">
+            <div class="pop-up m-with-auto pop-up-form">
+              <div class="pop-up-top-left">
+                <button class="btn-top-left btn-question">
+                  <i class="far fa-question-circle"></i>
+                </button>
+                <button id="btnEscape" class="btn-top-left btn-escape">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+              <div class="pop-up-header">
+                <p class="pop-up-title">Thông tin nhân viên</p>
+                <div class="pop-up-checks">
+                  <div class="pop-up-check"></div>
+                  <p>Là khách hàng</p>
+                  <div class="pop-up-check"></div>
+                  <p>Là nhà cung cấp</p>
+                </div>
+              </div>
+              <div class="pop-up-content m-with-auto">
+                <div class="m-row">
+                  <div class="m-col-6">
+                    <div class="m-row">
+                      <div class="m-col-5 m-padding-right-8">
+                        <div class="input-wrapper">
+                          <p class="text">Mã *</p>
+                          <input
+                            type="text"
+                            class="t-input"
+                            placeholder="Nhập mã nhân viên"
+                            fieldName="EmployeeCode"
+                            id="employeeCode"
+                          />
+                        </div>
+                      </div>
+                      <div class="m-col-7 m-padding-right-8">
+                        <div class="input-wrapper">
+                          <p class="text">Tên *</p>
+                          <input
+                            type="text"
+                            class="t-input"
+                            placeholder="Nhập tên nhân viên"
+                            fieldName="EmployeeName"
+                            validate="FullName"
+                            id="FullName"
+                          />
+                          <div class="error-message">
+                            Tên không được để trống
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="m-col-6">
+                    <div class="m-row">
+                      <div class="m-col-5 m-padding-left-8">
+                        <div class="input-wrapper">
+                          <p class="text">Ngày sinh</p>
+                          <input
+                            type="date"
+                            class="t-input"
+                            fieldName="DateOfBirth"
+                          />
+                        </div>
+                      </div>
+                      <div class="m-col-7 m-padding-left-8">
+                        <div class="t-row">
+                          <p class="text">Giới tính</p>
+
+                          <div class="input-radio-wrapper">
+                            <label for="male">
+                              <input
+                                type="radio"
+                                name="Gender"
+                                value="1"
+                                id="male"
+                                checked
+                              />
+                              Nam
+                            </label>
+                            <label for="female">
+                              <input
+                                type="radio"
+                                name="Gender"
+                                value="0"
+                                id="female"
+                              />
+                              Nữ</label
+                            >
+                            <label for="other">
+                              <input
+                                type="radio"
+                                name="Gender"
+                                value="1"
+                                id="other"
+                              />
+                              Khác
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="m-row m-margin-top-16">
+                  <div class="m-col-6 m-padding-right-8">
+                    <div class="t-row">
+                      <p class="text">Đơn vị</p>
+                      <!-- lib combobox -->
+                      <combobox
+                        api="http://cukcuk.manhnv.net/api/v1/Departments"
+                        id="cbDepartment"
+                        fieldData="DepartmentId"
+                        fieldName="DepartmentName"
+                      ></combobox>
+                    </div>
+                  </div>
+                  <div class="m-col-6">
+                    <div class="m-row">
+                      <div class="m-col-7 m-padding-left-8">
+                        <div class="input-wrapper">
+                          <p class="text">Số CMND</p>
+                          <input
+                            type="text"
+                            class="t-input"
+                            placeholder="Nhập số CMND"
+                            fieldName="PersonalTaxCode"
+                          />
+                        </div>
+                      </div>
+                      <div class="m-col-5 m-padding-left-8">
+                        <div class="input-wrapper">
+                          <p class="text">Ngày cấp</p>
+                          <input
+                            type="date"
+                            class="t-input"
+                            placeholder="Nhập ngày cấp"
+                            fieldName="CreatedDate"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="m-row m-margin-top-16">
+                  <div class="m-col-6 m-padding-right-8">
+                    <div class="input-wrapper">
+                      <p class="text">Chức danh</p>
+                      <input
+                        type="text"
+                        class="t-input"
+                        placeholder="Nhập chức danh"
+                        fieldName="EmployeePosition"
+                      />
+                    </div>
+                  </div>
+                  <div class="m-col-6 m-padding-left-8">
+                    <div class="input-wrapper">
+                      <p class="text">Nơi cấp</p>
+                      <input
+                        type="text"
+                        class="t-input"
+                        placeholder="Nhập nơi cấp"
+                        fieldName="IdentityPlace"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="m-row m-margin-top-16">
+                  <div class="m-col-12">
+                    <div class="input-wrapper">
+                      <p class="text">Địa chỉ</p>
+                      <input
+                        type="text"
+                        class="t-input"
+                        placeholder="Nhập địa chỉ"
+                        fieldName="Address"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="m-row m-margin-top-16">
+                  <div class="m-col-3 m-padding-right-8">
+                    <div class="input-wrapper">
+                      <p class="text">Di động</p>
+                      <input
+                        type="text"
+                        class="t-input"
+                        placeholder="Nhập SĐT di động"
+                        fieldName="PhoneNumber"
+                      />
+                    </div>
+                  </div>
+                  <div class="m-col-3 m-padding-right-8">
+                    <div class="input-wrapper">
+                      <p class="text">Điện thoại cố định</p>
+                      <input
+                        type="text"
+                        class="t-input"
+                        placeholder="Nhập SĐT cố định"
+                        fieldName="TelephoneNumber"
+                      />
+                    </div>
+                  </div>
+                  <div class="m-col-3 m-padding-right-8">
+                    <div class="input-wrapper">
+                      <p class="text">Email</p>
+                      <input
+                        type="text"
+                        class="t-input"
+                        placeholder="Nhập email"
+                        fieldName="Email"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="m-row m-margin-top-16">
+                  <div class="m-col-3 m-padding-right-8">
+                    <div class="input-wrapper">
+                      <p class="text">Tài khoản ngân hàng</p>
+                      <input
+                        type="text"
+                        class="t-input"
+                        placeholder="Nhập số tài khoản ngân hàng"
+                        fieldName="BankAccountNumber"
+                      />
+                    </div>
+                  </div>
+                  <div class="m-col-3 m-padding-right-8">
+                    <div class="input-wrapper">
+                      <p class="text">Tên ngân hàng</p>
+                      <input
+                        type="text"
+                        class="t-input"
+                        placeholder="Nhập tên ngân hàng"
+                        fieldName="BankName"
+                      />
+                    </div>
+                  </div>
+                  <div class="m-col-3 m-padding-right-8">
+                    <div class="input-wrapper">
+                      <p class="text">Chi nhánh</p>
+                      <input
+                        type="text"
+                        class="t-input"
+                        placeholder="Nhập chi nhánh"
+                        fieldName="BankBranchName"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pop-up-footer">
+                <button id="btnCancel" class="t-btn btn-cancel">Không</button>
+                <div class="pop-up-btns">
+                  <button id="saveEmployee" class="t-btn">Cất</button>
+                  <button id="saveAddEmployee" class="t-btn t-btn-add">
+                    Cất và Thêm
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- dialog add end -->
+    <!-- pop up xóa nhân viên -->
+    <div id="showDialogDel" class="show-dialog">
+      <div class="m-dialog">
+        <div class="pop-up">
+          <div class="pop-up-content">
+            <div class="pop-up-icon">
+              <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <div class="pop-up-text">
+              Bạn có thực sự muốn xóa nhân viên <<span
+                class="text-employee-code"
+              ></span
+              >> không ?<!--000579-->
+            </div>
+          </div>
+          <div class="pop-up-footer">
+            <button id="btnCancelPopUpDel" class="t-btn btn-cancel">
+              không
+            </button>
+            <button id="btnDelEmployee" class="t-btn t-btn-add">có</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- pop up xóa nhân viên end -->
+    <!-- pop up cảnh báo lỗi -->
+    <div id="showDialogError" class="show-dialog">
+      <div class="m-dialog">
+        <div class="pop-up">
+          <div class="pop-up-content">
+            <div class="pop-up-icon">
+              <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <div class="pop-up-text">Bạn đang gặp sự cố!<!--000579--></div>
+          </div>
+          <div class="pop-up-footer p-flex-end">
+            <button class="t-btn t-btn-add">Đóng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- pop up cảnh báo lỗi end -->
+    <!-- dialog loader data -->
+    <div id="dialogLoader" class="show-dialog">
+      <div class="m-dialog">
+        <div class="loader-dialog"></div>
+      </div>
+    </div>
+    <!-- dialog loader data end -->
+    <!-- toast messenger thông báo xóa thành công -->
+    <div class="toast-messenger-box">
+      <div id="toastMessDel">
+        <div class="toast-messenger-item">
+          <div class="toast-messenger-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="toast-messenger-content">Xóa nhân viên thành công</div>
+          <div class="toast-messenger-cancel"></div>
+        </div>
+      </div>
+      <div id="toastMessAdd">
+        <div class="toast-messenger-item">
+          <div class="toast-messenger-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="toast-messenger-content">
+            Thêm mới nhân viên thành công
+          </div>
+          <div class="toast-messenger-cancel"></div>
+        </div>
+      </div>
+      <div id="toastMessUpDate">
+        <div class="toast-messenger-item">
+          <div class="toast-messenger-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="toast-messenger-content">Sửa nhân viên thành công</div>
+          <div class="toast-messenger-cancel"></div>
+        </div>
+      </div>
+    </div>
+    <!-- toast messenger thông báo xóa thành công end -->
+
+    <!-- link js -->
+    <!-- thư viện -->
+    <script src="../lib/jquery-min-production.js"></script>
+    <!-- các thành phần dùng chung -->
+    <script src="../js/base/enum.js"></script>
+    <script src="../js/base/common.js"></script>
+    <script src="../js/base/table.js"></script>
+    <script src="../js/base/combobox.js"></script>
+    <script src="../js/base/check-box-row.js"></script>
+    <script src="../js/base/validate.js"></script>
+    <!-- các thành phần dùng riêng -->
+
+    <script src="../js/page/employee.js"></script>
+  </body>
+</html>

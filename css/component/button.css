@@ -1,0 +1,56 @@
+.t-btn {
+  height: 40px;
+  font-size: 13px;
+  color: #000000;
+  padding: 0 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  min-width: 70px;
+  border: 1px solid #000;
+  font-weight: bold;
+}
+
+.t-btn.t-btn-add {
+  color: #ffff;
+  border: none;
+  background-color: #2ca01c;
+}
+
+.t-btn.t-btn-add:hover {
+  background-color: #3dd429;
+}
+
+.form-employee .btn-top-left {
+  font-size: 24px;
+  padding: 8px;
+  margin-right: 6px;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+
+.t-combobox-btn {
+  position: absolute;
+  transform: rotate(0deg);
+  transition: transform 0.15s linear;
+  top: 2px;
+  width: 36px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--white-color);
+  right: 2px;
+  height: 28px;
+  background: url(../../content/img/Sprites.64af8f61.svg) no-repeat;
+  cursor: pointer;
+  background-position: -550px -353px;
+}
+.t-combobox-btn:hover {
+  background-color: var(--btn-hover);
+}
+#cbxPageSize .t-combobox-btn.active-up {
+  transform: rotate(180deg);
+  transition: transform 0.15s linear;
+}

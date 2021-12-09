@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>combobox</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    "
+  >
+    <br />
+    <br />
+    <div class="t-combobox-wrapper">
+      <!-- lib combobox -->
+      <combobox
+        api="http://cukcuk.manhnv.net/api/v1/Departments"
+        id="cbDepartment"
+        fieldData="DepartmentId"
+        fieldName="DepartmentName"
+      ></combobox>
+
+      <!-- <div id="cbDepartment" fieldData="departments" class="t-combobox">
+        <input
+          class="t-input t-combobox-input"
+          type="text"
+          placeholder="Phòng ban"
+        />
+        <button class="t-combobox-btn"></button>
+        <div class="t-combobox-list">
+          <div class="t-combobox-item">Phòng hành chính</div>
+          <div class="t-combobox-item">Phòng Kế toán</div>
+          <div class="t-combobox-item">Phòng quản lý</div>
+          <div class="t-combobox-item">Phòng nhân sự</div>
+        </div>
+      </div> -->
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <!-- <div class="t-combobox-wrapper">
+      <div class="t-combobox">
+        <input
+          class="t-input t-combobox-input"
+          type="text"
+          placeholder="20 bản ghi trên trang"
+        />
+        <button class="t-combobox-btn" tabindex="-1"></button>
+        <div class="t-combobox-list">
+          <div class="t-combobox-item">05 bản ghi trên 1 trang</div>
+          <div class="t-combobox-item">10 bản ghi trên 1 trang</div>
+          <div class="t-combobox-item">15 bản ghi trên 1 trang</div>
+          <div class="t-combobox-item">20 bản ghi trên 1 trang</div>
+        </div>
+      </div>
+    </div> -->
+    <br />
+    <br />
+    <br />
+    <br />
+    <combobox id="cbxPageSize">
+      <item ItemDefault="true" value="5">05 bản ghi trên 1 trang</item>
+      <item value="10">10 bản ghi trên 1 trang</item>
+      <item value="15">15 bản ghi trên 1 trang</item>
+      <item value="20">20 bản ghi trên 1 trang</item>
+      <item value="25">25 bản ghi trên 1 trang</item>
+    </combobox>
+    <script src="./lib/jquery-min-production.js"></script>
+    <script src="./js/base/combobox.js"></script>
+  </body>
+</html>

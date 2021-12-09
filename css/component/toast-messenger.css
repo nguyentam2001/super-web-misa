@@ -1,0 +1,45 @@
+.toast-messenger-box {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 3;
+}
+#toastMessUpDate,
+#toastMessAdd,
+#toastMessDel {
+  display: none;
+}
+
+.toast-messenger-item {
+  background-color: #ffffff;
+  margin-top: 16px;
+  height: 44px;
+  border-radius: 4px;
+  box-shadow: 2px 3px 8px rgb(0 0 0 / 50%);
+  display: flex;
+  max-width: 300px;
+  align-items: center;
+  padding: 8px;
+  background-color: #ffffff;
+}
+.toast-messenger-icon {
+  background-repeat: no-repeat;
+  font-size: 24px;
+  color: var(--primary-color);
+}
+.toast-messenger-content {
+  color: #000000;
+  font-size: 13px;
+  flex: 1;
+  padding-left: 16px;
+  padding-right: 18px;
+}
+.toast-messenger-cancel {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  background: url(../../content/img/Sprites.64af8f61.svg) no-repeat;
+  cursor: pointer;
+  background-position: -146px -146px;
+}
